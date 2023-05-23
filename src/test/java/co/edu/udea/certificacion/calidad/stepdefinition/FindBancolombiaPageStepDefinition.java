@@ -1,6 +1,7 @@
 package co.edu.udea.certificacion.calidad.stepdefinition;
 
 
+import co.edu.udea.certificacion.calidad.questions.Validation;
 import co.edu.udea.certificacion.calidad.tasks.FindThe;
 import co.edu.udea.certificacion.calidad.tasks.OpenThe;
 import co.edu.udea.certificacion.calidad.userinterfaces.UsuarioPage;
@@ -17,6 +18,9 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
+
+import static com.google.common.base.Predicates.equalTo;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 @RunWith(Cucumber.class)
 public class FindBancolombiaPageStepDefinition {
@@ -50,6 +54,6 @@ public class FindBancolombiaPageStepDefinition {
     @Then("puedo ver el link de la pagina oficial de creditos de bancolombia")
     public void puedoVerElLink(){
         //todo
-        //throw new PendingException();
+        usuario.should(seeThat(Validation.theBancolombiaPage(), equalTo(true)));
     }
 }
