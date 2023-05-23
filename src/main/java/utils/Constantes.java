@@ -1,5 +1,5 @@
 package utils;
 
 public class Constantes {
-    public static final String TEXT_TO_VALIDATE = "Grupo Bancolombia";
+    public static final String TEXT_TO_VALIDATE = "Simulador";
 }

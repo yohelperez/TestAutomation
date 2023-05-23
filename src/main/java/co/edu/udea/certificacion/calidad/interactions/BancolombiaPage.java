@@ -15,7 +15,7 @@ public class BancolombiaPage implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Enter.theValue("bancolombia creditos personas").into(INPUT_TEXT).thenHit(Keys.RETURN));
+        actor.attemptsTo(Enter.theValue("bancolombia simular credito de libre inversion").into(INPUT_TEXT).thenHit(Keys.RETURN));
         actor.attemptsTo(Click.on(LINK_BANCOLOMBIA_PAGE));
     }
 

@@ -10,9 +10,9 @@
   # se puede enviar diferentes filas de parametros para ejecutar la prueba
   #Scenario Outline: envia multiples combinaiciones de parametros
 
-  Scenario: Buscar la pagina oficial de la udea en el motor de google
+  Scenario: Buscar la pagina oficial de bancolombia en el motor de google
     Given que me encuentro en la pagina principal de google
-    When escriba la palabra bancolombia creditos
+    When escriba la palabra bancolombia simular credito de libre inversion
     Then puedo ver el link de la pagina oficial de creditos de bancolombia
 
 

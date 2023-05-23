@@ -5,7 +5,6 @@ import co.edu.udea.certificacion.calidad.questions.Validation;
 import co.edu.udea.certificacion.calidad.tasks.FindThe;
 import co.edu.udea.certificacion.calidad.tasks.OpenThe;
 import co.edu.udea.certificacion.calidad.userinterfaces.UsuarioPage;
-import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -23,7 +22,7 @@ import static com.google.common.base.Predicates.equalTo;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 @RunWith(Cucumber.class)
-public class FindBancolombiaPageStepDefinition {
+public class SimulateBancolombiaPageStepDefinition {
 
     @Managed(driver = "chrome")
     public WebDriver driver;
@@ -46,7 +45,7 @@ public class FindBancolombiaPageStepDefinition {
         usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
     }
 
-    @When("escriba la palabra bancolombia creditos")
+    @When("escriba la palabra bancolombia simular credito de libre inversion")
     public void escribaLaPalabraBancolombiaCreditos(){
         usuario.attemptsTo(FindThe.BancolombiaPage());
     }
