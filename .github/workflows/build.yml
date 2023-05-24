@@ -28,6 +28,9 @@ jobs:
           overwrite-settings: true
           job-status: success
 
+      - name: Print Chrome version
+        run: google-chrome-stable --version
+
       - name: Grant execute permission for Gradlew
         run: chmod +x gradlew
 
