@@ -50,7 +50,7 @@ public class SimulateBancolombiaPageStepDefinition {
         usuario.attemptsTo(FindThe.BancolombiaPage());
     }
 
-    @Then("puedo ver el link de la pagina oficial de creditos de bancolombia")
+    @Then("puedo ver link de la pagina oficial de creditos de bancolombia")
     public void puedoVerElLink(){
         //todo
         usuario.should(seeThat(Validation.theBancolombiaPage(), equalTo(true)));
