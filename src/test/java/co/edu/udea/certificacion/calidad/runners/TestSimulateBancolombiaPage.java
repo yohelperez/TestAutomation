@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         glue = "co.edu.udea.certificacion.calidad.stepdefinition",
         snippets = SnippetType.CAMELCASE
 )
-public class SimulateBancolombiaPage {
+
+public class TestSimulateBancolombiaPage {
 
 
 }
