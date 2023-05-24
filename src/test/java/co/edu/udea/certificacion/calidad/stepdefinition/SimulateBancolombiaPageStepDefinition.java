@@ -45,7 +45,7 @@ public class SimulateBancolombiaPageStepDefinition {
         usuario.attemptsTo(OpenThe.Browser(new UsuarioPage()));
     }
 
-    @When("escriba la palabra bancolombia simular credito de libre inversion")
+    @When("busco la pagina de bancolombia para simular credito de libre inversion")
     public void escribaLaPalabraBancolombiaCreditos(){
         usuario.attemptsTo(FindThe.BancolombiaPage());
     }
