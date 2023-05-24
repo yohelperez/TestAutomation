@@ -9,16 +9,18 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3
       - name: Set up JDK 8
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
-          java-version: 8
+          java-version: '8'
           distribution: 'corretto'
           architecture: x64
           check-latest: false
@@ -28,20 +30,18 @@ jobs:
           overwrite-settings: true
           job-status: success
 
-      - name: Print Chrome version
-        run: google-chrome-stable --version
+      - uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
 
-      - name: Grant execute permission for Gradlew
-        run: chmod +x gradlew
-
-      - name: Build and test with Gradle
-        run: ./gradlew test
+      - name: Build with Gradle
+        run: ./gradlew clean test
 
       - name: Copy test report to artifacts
         run: cp -r build/reports/tests/test ${{ github.workspace }}/test-report
 
-      - name: Upload test report
-        uses: actions/upload-artifact@v2
+      - name: Archive Rest Results
+        uses: actions/upload-artifact@v3
+        if: success() || failure()
         with:
-          name: Test Report
-          path: ${{ github.workspace }}/test-report
+          name: test-results
+          path: GradleReports/emailable-report.html
