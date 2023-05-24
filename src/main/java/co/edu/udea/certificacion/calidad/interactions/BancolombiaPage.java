@@ -18,8 +18,8 @@ public class BancolombiaPage implements Interaction {
         actor.attemptsTo(Enter.theValue("bancolombia simular credito de libre inversion").into(INPUT_TEXT).thenHit(Keys.RETURN));
         actor.attemptsTo(Click.on(LINK_BANCOLOMBIA_PAGE));
         actor.attemptsTo(Click.on(BUTTON_CONTINUAR));
-        actor.attemptsTo(Enter.keyValues(Keys.ENTER).into(CHECK_SI));
-        actor.attemptsTo();
+        //actor.attemptsTo(Enter.keyValues(Keys.ENTER).into(CHECK_SI));
+        actor.attemptsTo(Click.on(CHECK_SI));
     }
 
     public static BancolombiaPage findItAndGo(){

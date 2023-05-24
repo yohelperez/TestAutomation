@@ -13,7 +13,7 @@ public class UsuarioPage extends PageObject {
      //buttons to click in bancolombia website
      public static  final Target BUTTON_CONTINUAR = Target.the("Boton continuar").locatedBy("//*[@id=\"boton-seleccion-tarjeta\"]");
 
-     public static final Target CHECK_SI = Target.the("Check si").locatedBy("//*[@id=\"opcion-si\"]/label/span[1]/span[1]");
+     public static final Target CHECK_SI = Target.the("Check si").locatedBy("//*[@id='opcion-si']");
 
 
      //public static final Target TEXT_BANCOLOMBIA_PAGE = Target.the("Texto de Simulador Credito Bancolombia").locatedBy("//*[@id=\"layoutContainers\"]/div/div[2]/div/div[2]/section/div[3]/div[2]/app-root/div/app-solicitud-informacion/section/div[1]/h1");
