@@ -5,8 +5,6 @@ S
 #src/main/java/org/example/Main.java,0\b\0ba1b9c7a4878802f938e331cc2d8a042087ec6b
 ™
 isrc/test/java/co/edu/udea/certificacion/calidad/stepdefinition/SimulateBancolombiaPageStepDefinition.java,4\c\4c9848366784474b6d1ced3a1fc13328b918d79d
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 7
@@ -23,5 +21,3 @@ y
 Isrc/main/java/co/edu/udea/certificacion/calidad/questions/Validation.java,8\6\8656a0557881cf3ee77c805db847f999b58a8817
 
 Osrc/main/java/co/edu/udea/certificacion/calidad/userinterfaces/UsuarioPage.java,4\6\46527155a17253d648c19cbc524071f2cb259481
-ˆ
-Xsrc/test/java/co/edu/udea/certificacion/calidad/runners/TestSimulateBancolombiaPage.java,0\c\0c8ededd475793d582b45d400037ed39c3341d65
