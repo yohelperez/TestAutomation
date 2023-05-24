@@ -9,8 +9,6 @@ S
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
 C
 serenity.properties,2\5\25f1bbdc8dba7ca4a4b90251f1ef69621b24a28c
-™
-isrc/test/java/co/edu/udea/certificacion/calidad/stepdefinition/SimulateBancolombiaPageStepDefinition.java,4\c\4c9848366784474b6d1ced3a1fc13328b918d79d
 r
 Bsrc/main/java/co/edu/udea/certificacion/calidad/tasks/OpenThe.java,b\5\b5fecfc37a4a1d9306d2d58fac86424b421cbeee
 r

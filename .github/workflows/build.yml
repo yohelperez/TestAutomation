@@ -32,7 +32,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build and test with Gradle
-        run: ./gradlew clean test
+        run: ./gradlew test
 
       - name: Copy test report to artifacts
         run: cp -r build/reports/tests/test ${{ github.workspace }}/test-report
