@@ -1,6 +1,5 @@
 package co.edu.udea.certificacion.calidad.stepdefinition;
 
-
 import co.edu.udea.certificacion.calidad.questions.Validation;
 import co.edu.udea.certificacion.calidad.tasks.FindThe;
 import co.edu.udea.certificacion.calidad.tasks.OpenThe;
@@ -9,26 +8,24 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.junit.Cucumber;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import static com.google.common.base.Predicates.equalTo;
+import java.util.Objects;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
-@RunWith(Cucumber.class)
-public class SimulateBancolombiaPageStepDefinition {
+public class TestSimulateBancolombiaPageStepDefinitions {
 
     @Managed(driver = "chrome")
     public WebDriver driver;
 
     //Actor que realiza los casos del caso prueba
-    private Actor usuario = Actor.named("Dominique");
+    private final Actor usuario = Actor.named("Dominique");
 
     @Before(order=1)
     public void setTheStage() {
@@ -50,9 +47,8 @@ public class SimulateBancolombiaPageStepDefinition {
         usuario.attemptsTo(FindThe.BancolombiaPage());
     }
 
-    @Then("puedo ver el link de la pagina oficial de creditos de bancolombia")
+    @Then("puedo ver link de la pagina oficial de creditos de bancolombia")
     public void puedoVerElLink(){
-        //todo
-        usuario.should(seeThat(Validation.theBancolombiaPage(), equalTo(true)));
+        usuario.should(seeThat(Validation.theBancolombiaPage(), aBoolean -> Objects.equals(aBoolean, true)));
     }
 }

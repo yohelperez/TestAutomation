@@ -13,7 +13,7 @@
   Scenario: Buscar la pagina oficial de bancolombia en el motor de google
     Given que me encuentro en la pagina principal de google
     When busco la pagina de bancolombia para simular credito de libre inversion
-    Then puedo ver el link de la pagina oficial de creditos de bancolombia
+    Then puedo ver link de la pagina oficial de creditos de bancolombia
 
 
 
